@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http:www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Evento</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body class="container">
+
+<nav>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Cadastro de Eventos</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <a href="/" class="waves-effect waves-light btn"><i class="material-icons left">arrow_back</i>Voltar</a>
+        </ul>
+    </div>
+</nav>
+
+<br>
+<br>
+<br>
+<br>
+<th:block th:include="mensagemValidacao"></th:block>
+
+<form class="container" method="post">
+
+    <ul class="collection">
+        <li class="collection-item">
+            <div class="input-field col s6">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="icon_prefix" type="text" class="validate" name="nome" required>
+                <label for="icon_prefix">Nome</label>
+            </div>
+        </li>
+        <li class="collection-item">
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">location_on</i>
+                    <input id="local" type="text" class="validate" name="local" required>
+                    <label for="local">Local</label>
+                </div>
+                <div class="input-field col s3">
+                    <input id="data" type="date" class="validate" name="data" required>
+                    <label for="local">Data</label>
+                </div>
+                <div class="input-field col s3">
+                    <input id="horario" type="time" class="validate" name="horario" required>
+                    <label for="local">Horario</label>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <button type="submit" class="waves-effect waves-light btn"> Salvar</button>
+
+</form>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+</html>
